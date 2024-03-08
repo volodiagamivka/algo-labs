@@ -22,9 +22,9 @@ def finding_nums(array, p):
         j = i + 1
         k = len(sorted_arr) - 1
         while j < k:
-            if  sorted_arr[j] + sorted_arr[k] == p-array[i]:
+            if  sorted_arr[j] + sorted_arr[k] == p-sorted_arr[i]:
                 return True
-            elif  sorted_arr[j] + sorted_arr[k] < p-array[i]:
+            elif  sorted_arr[j] + sorted_arr[k] < p-sorted_arr[i]:
                 j += 1
             else:
                 k -= 1
