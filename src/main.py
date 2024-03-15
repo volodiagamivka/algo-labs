@@ -9,9 +9,9 @@ def branch_sums(root):
     if root is None:
         return 0
 
-    if root.left is not None:
-        if root.left.left is None and root.left.right is None:
-            return root.left.value + branch_sums(root.right)
+    if root.right is not None:
+        if root.right.right is None and root.right.left is None:
+            return root.right.value + branch_sums(root.left)
 
     return branch_sums(root.left) + branch_sums(root.right)
 
