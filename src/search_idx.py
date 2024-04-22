@@ -1,9 +1,7 @@
-def search_idx_rabbin_karp(needle, haystack):
+def search_idx_rabbin_karp(needle, haystack,base=11,divisor=21):
     n = len(haystack)
     m = len(needle)
-    base = 11
-    divisor = 21
-
+    
     hash_of_needle = 0
     hash_of_haystack = 0
 
