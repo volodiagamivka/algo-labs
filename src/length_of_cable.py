@@ -3,19 +3,19 @@ import csv
 
 def floyd_warshall(graph):
     
-    dist = [[float("inf")] * N for vertex in range(N)]
+    dist = [[float("inf")] * len(graph) for vertex in range(len(graph))]
 
-    for i in range(len(graph)):
-        for j in range(len(graph)):
-            if graph[i][j] != 0:
-                dist[i][j] = graph[i][j]
-            elif i == j:
-                dist[i][j] = 0
+    for rows in range(len(graph)):
+        for cols in range(len(graph)):
+            if graph[rows][cols] != 0:
+                dist[rows][cols] = graph[rows][cols]
+            elif rows == cols:
+                dist[rows][cols] = 0
 
     for k in range(len(graph)):
-        for i in range(len(graph)):
-            for j in range(len(graph)):
-                dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
+        for rows in range(len(graph)):
+            for cols in range(len(graph)):
+                dist[rows][cols] = min(dist[rows][cols], dist[rows][k] + dist[k][cols])
 
     return dist
 
