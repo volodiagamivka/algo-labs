@@ -2,7 +2,7 @@ import csv
 
 
 def floyd_warshall(graph):
-    N = len(graph)
+    
     dist = [[float("inf")] * N for vertex in range(N)]
 
     for i in range(len(graph)):
