@@ -1,8 +1,6 @@
 import unittest
 
-import sys
-sys.path.append('/Users/voloda/Desktop/algo/lab5/src')
-from number_of_islands import Islands
+from src.number_of_islands import Islands
 
 
 
