@@ -1,5 +1,5 @@
 import unittest
-from main import num_of_pumpkins
+from src.num_of_pumpkins import num_of_pumpkins
 
 
 class TestSolution(unittest.TestCase):
