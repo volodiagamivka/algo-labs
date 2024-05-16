@@ -1,5 +1,5 @@
 import unittest
-from heap import PriorityQueue
+from src.heap_based_priority_queue import PriorityQueue
 
 
 class TestPriorityQueue(unittest.TestCase):
@@ -10,7 +10,7 @@ class TestPriorityQueue(unittest.TestCase):
         pq.insert_to_queue(3, 5)
         pq.insert_to_queue(4,4)
 
-        expected_queue = [(2,7), (3,5), (4,4), (1,3)]
+        expected_queue = [(2, 7), (4, 4), (3, 5), (1, 3)]
         actual_queue = [(node.value,node.priority) for node in pq.queue]
         self.assertEqual(actual_queue, expected_queue)
 
@@ -32,7 +32,7 @@ class TestPriorityQueue(unittest.TestCase):
         pq.insert_to_queue(3, 8)
         pq.insert_to_queue(4, 2)
 
-        expected_output = [(8, 3), (5, 1), (3, 2), (2, 4)]
+        expected_output = [(3, 8), (2, 3), (1, 5), (4, 2)]
         actual_output = [(node.value, node.priority) for node in pq.queue]
 
         self.assertEqual(actual_output, expected_output)
