@@ -1,5 +1,5 @@
 import unittest
-from length_of_cable import min_length_of_cable, open_file
+from src.length_of_cable import min_length_of_cable, open_file
 
 
 class TestMaxLength(unittest.TestCase):
