@@ -1,5 +1,5 @@
 import unittest
-from main import finding_nums
+from src.find_three_nums import finding_nums
 
 
 class FindingNums(unittest.TestCase):
