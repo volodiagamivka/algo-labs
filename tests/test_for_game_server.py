@@ -1,7 +1,5 @@
-import sys
 
-sys.path.append("/Users/voloda/Desktop/algo/lab6/src")
-from game_server import game_server
+from src.game_server import game_server
 import unittest
 
 
